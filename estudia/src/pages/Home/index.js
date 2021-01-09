@@ -15,8 +15,8 @@ const Home = () => {
       <Hero />
       <About />
       <Benefit />
-      <Testimoni />
-      <Kelas />
+      {/* <Testimoni />
+      <Kelas /> */}
     </Layout>
   );
 };

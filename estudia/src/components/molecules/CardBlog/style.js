@@ -15,6 +15,9 @@ export const MainCard = styled.div`
     -moz-box-shadow: -2px 5px 43px -20px rgba(0, 0, 0, 0.75);
     transition: box-shadow 0.2s linear;
   }
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
 `;
 export const ImgWrapper = styled.div`
   width: 100%;

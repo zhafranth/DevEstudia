@@ -19,10 +19,16 @@ export const ImgWrapper = styled.div`
     position: absolute;
     transform: scale(1.1);
   }
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 export const AboutMeta = styled.div`
   width: 50%;
   color: #100d0d;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
 `;
 export const Title = styled.h4`
   margin: 0;

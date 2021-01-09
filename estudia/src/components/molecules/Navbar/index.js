@@ -1,12 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { MainNavbar, Logo, Menu, MenuItem } from "./style";
+import { MainNavbar, Logo, Menu, MenuItem, Button } from "./style";
+
+// Icons
+import { FaBars } from "react-icons/fa";
+import { RiCloseLine } from "react-icons/ri";
 
 // Logo
 import LogoEstudia from "../../../assets/Logo/logo.svg";
 import LogoWhite from "../../../assets/Logo/logo-white.svg";
 
 const Navbar = ({ primary }) => {
+  const [isOpen, setIsOpen] = useState(true);
+
+  const handleShow = () => {
+    setIsOpen(!isOpen);
+  };
   return (
     <MainNavbar className={primary ? "primary" : ""}>
       <Logo>
@@ -18,7 +27,10 @@ const Navbar = ({ primary }) => {
           )}
         </Link>
       </Logo>
-      <Menu>
+      <Button onClick={handleShow} className={primary && "primary"}>
+        {isOpen ? <RiCloseLine /> : <FaBars />}
+      </Button>
+      <Menu open={isOpen} className={isOpen && "isOpen"}>
         <MenuItem>
           <Link to="/" className={`${primary ? "primary link" : "link"}`}>
             Kelas Bahasa Spanyol

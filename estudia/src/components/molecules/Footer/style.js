@@ -15,11 +15,19 @@ export const FooterContent = styled.div`
     margin-bottom: 1rem;
     color: #fff;
   }
+  @media screen and (max-width: 768px) {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
 `;
 export const LogoFooter = styled.div``;
 export const FooterItem = styled.div`
   display: flex;
   flex-direction: column;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
 `;
 export const Title = styled.h4``;
 export const Copyright = styled.p``;

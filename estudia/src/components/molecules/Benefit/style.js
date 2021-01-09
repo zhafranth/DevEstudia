@@ -16,16 +16,28 @@ export const Title = styled.h2`
   img {
     margin-left: 2rem;
   }
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 export const WrapperBenefit = styled.div`
   margin-top: 4rem;
   display: flex;
   justify-content: space-between;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
+
 export const ItemBenefit = styled.div`
   width: 30%;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    /* display: flex; */
+  }
 `;
+
 export const Point = styled.h4`
   color: #ffc300;
   font-size: 3.5rem;
@@ -37,6 +49,9 @@ export const TitleBenefit = styled.h5`
   font-weight: 700;
   font-size: 24px;
   margin: 1.2rem 0 0.8rem 0;
+  @media screen and (max-width: 768px) {
+    /* color: red; */
+  }
 `;
 export const DescBenefit = styled.p`
   color: #100d0d;
