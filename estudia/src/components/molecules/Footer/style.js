@@ -1,6 +1,10 @@
 import styled from "styled-components/macro";
 
 export const MainFooter = styled.div`
+  /* position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0; */
   background-color: #910603;
   color: #fff;
   padding: 2rem 12vw;

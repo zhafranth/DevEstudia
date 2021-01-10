@@ -6,8 +6,9 @@ export const MainCard = styled.div`
   padding: 12px;
   border-radius: 10px;
   max-width: 365px;
-  width: 30%;
+
   margin-bottom: 2rem;
+  height: max-content;
   cursor: pointer;
   &:hover {
     box-shadow: -2px 5px 43px -20px rgba(0, 0, 0, 0.75);

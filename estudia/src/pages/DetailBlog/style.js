@@ -16,10 +16,11 @@ export const ImgWrapper = styled.div`
 
 export const Desc = styled.p`
   padding: 0 12vw;
-  text-align: justify;
-  font-weight: 400;
-  line-height: 1.8rem;
-  color: #0b0707;
+  overflow: hidden;
+  img {
+    width: 100%;
+    height: auto;
+  }
 `;
 
 export const Title = styled.h2`
