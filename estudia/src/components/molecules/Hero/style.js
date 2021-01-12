@@ -4,7 +4,6 @@ export const MainHero = styled.div`
   position: relative;
   display: flex;
   padding: 0 12vw;
-  /* box-sizing: border-box; */
   z-index: -2;
 `;
 
@@ -22,9 +21,6 @@ export const TitleHero = styled.h2`
   font-weight: 700;
   color: #910603;
   margin: 0;
-  @media screen and (max-width: 768px) {
-    /* color: #fff; */
-  }
 `;
 
 export const DescHero = styled.p`
@@ -32,9 +28,6 @@ export const DescHero = styled.p`
   font-weight: 300;
   color: #565656;
   margin: 1.5rem 0;
-  @media screen and (max-width: 768px) {
-    /* color: #fff; */
-  }
 `;
 
 export const HeroImage = styled.div`
@@ -42,18 +35,12 @@ export const HeroImage = styled.div`
     position: absolute;
     top: -100px;
     right: 0;
-    /* transform: scale(1.3); */
   }
   @media screen and (max-width: 768px) {
-    /* display: none; */
     .img-hero {
       &:nth-child(1) {
         display: none;
       }
     }
-    /* overflow: hidden;
-    .img-hero {
-      right: -60vw;
-    } */
   }
 `;

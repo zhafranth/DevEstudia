@@ -1,31 +1,24 @@
 import React, { useEffect, useState } from "react";
-import { WrapperBlog } from "./style";
-import { Layout, Card } from "../../components/molecules";
+import { useParams } from "react-router-dom";
+import { Layout, ListBlog } from "../../components/molecules";
 import axios from "axios";
-import { Link } from "react-router-dom";
 
 const Blog = () => {
   const [data, setData] = useState([]);
+  const { blogId } = useParams();
 
   useEffect(() => {
     axios
-      .get("http://localhost:1337/artikels")
+      .get(`http://localhost:1337/${blogId}s`)
       .then((res) => {
         setData(res.data);
       })
       .catch((err) => console.log(err));
-  }, []);
-  console.log(data);
+  }, [blogId]);
+  console.log(useParams());
   return (
     <Layout primary>
-      <WrapperBlog>
-        {data.length != 0 &&
-          data.map((item, index) => (
-            <Link to={`/artikel-detail/${item.slug}`} className="link">
-              <Card key={index} title={item.title} image={item.image[0].url} />
-            </Link>
-          ))}
-      </WrapperBlog>
+      <ListBlog data={data} to="artikel-detail" />
     </Layout>
   );
 };

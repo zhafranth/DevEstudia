@@ -7,5 +7,17 @@ import Benefit from "./Benefit";
 import Testimoni from "./Testimoni";
 import Kelas from "./Kelas";
 import Card from "./CardBlog";
+import ListBlog from "./ListBlog";
 
-export { Hero, Navbar, Footer, Layout, About, Benefit, Testimoni, Kelas, Card };
+export {
+  Hero,
+  Navbar,
+  Footer,
+  Layout,
+  About,
+  Benefit,
+  Testimoni,
+  Kelas,
+  Card,
+  ListBlog,
+};

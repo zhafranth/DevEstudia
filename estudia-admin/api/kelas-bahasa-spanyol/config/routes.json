@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/kelas-bahasa-spanyols",
+      "handler": "kelas-bahasa-spanyol.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/kelas-bahasa-spanyols/count",
+      "handler": "kelas-bahasa-spanyol.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/kelas-bahasa-spanyols/:id",
+      "handler": "kelas-bahasa-spanyol.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/kelas-bahasa-spanyols",
+      "handler": "kelas-bahasa-spanyol.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/kelas-bahasa-spanyols/:id",
+      "handler": "kelas-bahasa-spanyol.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/kelas-bahasa-spanyols/:id",
+      "handler": "kelas-bahasa-spanyol.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

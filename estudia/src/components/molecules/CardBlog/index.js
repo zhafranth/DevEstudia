@@ -5,7 +5,7 @@ import { MainCard, ImgWrapper, Title, Desc, Time } from "./style";
 import ImgCover from "../../../assets/Images/cover-blog.png";
 
 const Card = ({ title, image }) => {
-  console.log(image);
+  // console.log(image);
   return (
     <MainCard>
       <ImgWrapper>

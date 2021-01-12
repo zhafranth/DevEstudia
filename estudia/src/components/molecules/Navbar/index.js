@@ -32,18 +32,24 @@ const Navbar = ({ primary }) => {
       </Button>
       <Menu open={isOpen} className={isOpen && "isOpen"}>
         <MenuItem>
-          <Link to="/" className={`${primary ? "primary link" : "link"}`}>
+          <Link
+            to="/artikel/kelas-bahasa-spanyol"
+            className={`${primary ? "primary link" : "link"}`}
+          >
             Kelas Bahasa Spanyol
           </Link>
         </MenuItem>
         <MenuItem>
-          <Link to="/" className={`${primary ? "primary link" : "link"}`}>
+          <Link
+            to="/artikel/tata-bahasa-dan-kosakata"
+            className={`${primary ? "primary link" : "link"}`}
+          >
             Tata Bahasa dan Kosakata
           </Link>
         </MenuItem>
         <MenuItem>
           <Link
-            to="/artikel"
+            to="/artikel/artikel"
             className={`${primary ? "primary link" : "link"}`}
           >
             Blog

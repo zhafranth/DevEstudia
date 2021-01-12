@@ -23,11 +23,17 @@ const DetailBlog = (props) => {
       })
       .catch((err) => console.log(err));
   }, []);
-  console.log(data);
+  console.log(data.image);
   return (
     <Layout primary>
       <ImgWrapper>
-        <img src={ImgCover} alt="cover blog" className="img-cover" />
+        <img
+          src={`http://localhost:1337${
+            data.image != undefined && data.image[0].url
+          }`}
+          alt="cover blog"
+          className="img-cover"
+        />
       </ImgWrapper>
 
       <Title>{data?.title}</Title>
