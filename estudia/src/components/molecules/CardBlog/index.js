@@ -4,7 +4,7 @@ import { MainCard, ImgWrapper, Title, Desc, Time } from "./style";
 // Image
 import ImgCover from "../../../assets/Images/cover-blog.png";
 
-const Card = ({ title, image }) => {
+const Card = ({ title, image, highlight }) => {
   // console.log(image);
   return (
     <MainCard>
@@ -16,10 +16,7 @@ const Card = ({ title, image }) => {
         />
       </ImgWrapper>
       <Title>{title}</Title>
-      {/* <Desc>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat fuga
-        distinctio ipsa assumenda laborum? A!
-      </Desc> */}
+      <Desc>{highlight && highlight}</Desc>
       {/* <Time>November 17, 2020</Time> */}
     </MainCard>
   );

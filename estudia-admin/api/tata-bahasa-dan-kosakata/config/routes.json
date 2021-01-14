@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/tata-bahasa-dan-kosakatas",
+      "handler": "tata-bahasa-dan-kosakata.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/tata-bahasa-dan-kosakatas/count",
+      "handler": "tata-bahasa-dan-kosakata.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/tata-bahasa-dan-kosakatas/:id",
+      "handler": "tata-bahasa-dan-kosakata.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/tata-bahasa-dan-kosakatas",
+      "handler": "tata-bahasa-dan-kosakata.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/tata-bahasa-dan-kosakatas/:id",
+      "handler": "tata-bahasa-dan-kosakata.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/tata-bahasa-dan-kosakatas/:id",
+      "handler": "tata-bahasa-dan-kosakata.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

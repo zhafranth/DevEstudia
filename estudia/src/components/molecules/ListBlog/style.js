@@ -6,7 +6,7 @@ export const WrapperBlog = styled.div`
   padding: 0 12vw;
   flex-wrap: wrap;
   margin-top: 5rem;
-  min-height: 53vh;
+  min-height: ${(props) => props.height};
 
   .link {
     display: block;

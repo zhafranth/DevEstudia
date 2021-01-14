@@ -29,6 +29,13 @@ export const LogoFooter = styled.div``;
 export const FooterItem = styled.div`
   display: flex;
   flex-direction: column;
+  .link {
+    display: flex;
+    align-items: center;
+    img {
+      margin-right: 0.5rem;
+    }
+  }
   @media screen and (max-width: 768px) {
     width: 100%;
   }

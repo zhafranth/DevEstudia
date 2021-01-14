@@ -11,19 +11,19 @@ import axios from "axios";
 const DetailBlog = (props) => {
   const [data, setData] = useState([]);
 
-  const { detailArtikel } = useParams();
+  const { detailArtikel, artikel } = useParams();
 
   // getData
   useEffect(() => {
     axios
-      .get("http://localhost:1337/artikels")
+      .get(`http://localhost:1337/${artikel}`)
       .then((res) => {
         const data = res.data.find((item) => item.slug === detailArtikel);
         setData(data);
       })
       .catch((err) => console.log(err));
   }, []);
-  console.log(data.image);
+  console.log(artikel);
   return (
     <Layout primary>
       <ImgWrapper>

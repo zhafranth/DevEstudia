@@ -13,6 +13,10 @@ import {
 // Logo & Icons
 import Logo from "../../../assets/Logo/logo-white.png";
 
+import Instagram from "../../../assets/Icons/instagam.svg";
+import Facebook from "../../../assets/Icons/facebook.svg";
+import Twitter from "../../../assets/Icons/twitter.svg";
+
 const Footer = () => {
   return (
     <MainFooter>
@@ -25,24 +29,36 @@ const Footer = () => {
         </LogoFooter>
         <FooterItem>
           <Title>Tentang Kami</Title>
-          <Link className="link">Profile</Link>
-          <Link className="link">Blog</Link>
+          <Link className="link" to="about">
+            Profile
+          </Link>
+          <Link className="link" to="/artikel/artikel">
+            Blog
+          </Link>
         </FooterItem>
         <FooterItem>
           <Title>Kelas Bahasa Spanyol</Title>
-          <Link className="link">Profile</Link>
-          <Link className="link">Blog</Link>
+          <Link className="link" to="/artikel/kelas-bahasa-spanyol">
+            Bahasa Spanyol
+          </Link>
+          <Link className="link" to="/artikel/tata-bahasa-dan-kosakata">
+            Tata Bahasa dan Kosakata
+          </Link>
         </FooterItem>
         <FooterItem>
           <Title>Kontak</Title>
-          <Link className="link">
-            <img src="" alt="facebook estudia" />
+          <a className="link" href="https://facebook.com/" className="link">
+            <img src={Facebook} alt="facebook estudia" />
             Estudia
-          </Link>
-          <Link className="link">
-            <img src="" alt="instagram estudia" />
+          </a>
+          <a className="link" href="https://instagram.com/" className="link">
+            <img src={Instagram} alt="instagram estudia" />
             Estudia
-          </Link>
+          </a>
+          <a className="link" href="https://twitter.com/" className="link">
+            <img src={Twitter} alt="twitter estudia" />
+            Estudia
+          </a>
         </FooterItem>
       </FooterContent>
       <Copyright />

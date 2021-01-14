@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Layout, ListBlog } from "../../components/molecules";
+import HeroBlog from "../../components/molecules/HeroBlog";
 import axios from "axios";
 
 const Blog = () => {
@@ -15,10 +16,19 @@ const Blog = () => {
       })
       .catch((err) => console.log(err));
   }, [blogId]);
-  console.log(useParams());
+  const handleTitle = () => {
+    if (blogId == "tata-bahasa-dan-kosakata") {
+      return "Tata Bahasa dan Kosakata";
+    } else if (blogId == "kelas-bahasa-spanyol") {
+      return "Kelas Bahasa Spanyol";
+    } else {
+      return "Artikel Estudia";
+    }
+  };
   return (
     <Layout primary>
-      <ListBlog data={data} to="artikel-detail" />
+      <HeroBlog title={handleTitle()} />
+      <ListBlog data={data} to={`${blogId}s`} height="53vh" />
     </Layout>
   );
 };

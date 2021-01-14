@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "kelas_bahasa_spanyols",
   "info": {
-    "name": "Kelas Bahasa Spanyol"
+    "name": "Kelas Bahasa Spanyol",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -18,7 +19,11 @@
     "image": {
       "collection": "file",
       "via": "related",
-      "allowedTypes": ["files", "images", "videos"],
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
       "plugin": "upload",
       "required": true
     },
@@ -29,6 +34,11 @@
     "slug": {
       "type": "string",
       "required": true
+    },
+    "highlight": {
+      "type": "text",
+      "required": true,
+      "maxLength": 200
     }
   }
 }

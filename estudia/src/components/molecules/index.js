@@ -8,6 +8,7 @@ import Testimoni from "./Testimoni";
 import Kelas from "./Kelas";
 import Card from "./CardBlog";
 import ListBlog from "./ListBlog";
+import HeroBlog from "./HeroBlog";
 
 export {
   Hero,
@@ -20,4 +21,5 @@ export {
   Kelas,
   Card,
   ListBlog,
+  HeroBlog,
 };
