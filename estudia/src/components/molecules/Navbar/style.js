@@ -65,6 +65,9 @@ export const MenuItem = styled.div`
     font-weight: 400;
     &.primary {
       color: #fff;
+      @media screen and (max-width: 768px) {
+        color: #910603;
+      }
     }
   }
   @media screen and (max-width: 768px) {

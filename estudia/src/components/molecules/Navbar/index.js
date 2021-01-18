@@ -11,7 +11,7 @@ import LogoEstudia from "../../../assets/Logo/logo.svg";
 import LogoWhite from "../../../assets/Logo/logo-white.svg";
 
 const Navbar = ({ primary }) => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleShow = () => {
     setIsOpen(!isOpen);

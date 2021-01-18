@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const WrapperBlog = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 0 12vw;
   flex-wrap: wrap;
   margin-top: 5rem;
@@ -15,8 +15,12 @@ export const WrapperBlog = styled.div`
     width: 30%;
     color: #100d0d;
     @media screen and (max-width: 768px) {
-      width: 100%;
+      width: max-content;
+      height: max-content;
     }
+  }
+  @media screen and (max-width: 768px) {
+    justify-content: center;
   }
 `;
 

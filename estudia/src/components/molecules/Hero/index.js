@@ -8,13 +8,19 @@ import Button from "../../atoms/Button";
 import HeroImg from "../../../assets/Images/Hero.png";
 import BgHeroImg from "../../../assets/Images/BgHero.png";
 
-const index = () => {
+const index = ({ refKelas }) => {
+  const handleShow = () => {
+    window.scrollTo({
+      behavior: "smooth",
+      top: refKelas.current.offsetTop - 30,
+    });
+  };
   return (
     <MainHero>
       <HeroContent>
         <TitleHero>Spanish Without Limits</TitleHero>
         <DescHero>Get a discount for 3 mounths of learning</DescHero>
-        <Button>Study Now</Button>
+        <Button onClick={handleShow}>Study Now</Button>
       </HeroContent>
       <HeroImage>
         <img

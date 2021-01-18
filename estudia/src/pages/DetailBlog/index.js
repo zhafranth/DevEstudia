@@ -23,7 +23,6 @@ const DetailBlog = (props) => {
       })
       .catch((err) => console.log(err));
   }, []);
-  console.log(artikel);
   return (
     <Layout primary>
       <ImgWrapper>

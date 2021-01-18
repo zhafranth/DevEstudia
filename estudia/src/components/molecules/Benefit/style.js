@@ -25,6 +25,7 @@ export const WrapperBenefit = styled.div`
   margin-top: 4rem;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   @media screen and (max-width: 768px) {
     flex-direction: column;
   }

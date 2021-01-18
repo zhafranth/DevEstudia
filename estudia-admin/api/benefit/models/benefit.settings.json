@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "benefits",
+  "info": {
+    "name": "Benefit",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "desc": {
+      "type": "string",
+      "required": true,
+      "maxLength": 200
+    }
+  }
+}

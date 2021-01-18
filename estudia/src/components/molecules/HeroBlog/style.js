@@ -2,6 +2,7 @@ import styled from "styled-components/macro";
 
 export const WrapperBlog = styled.div`
   position: relative;
+  z-index: -2;
 `;
 
 export const WrapperHero = styled.div`

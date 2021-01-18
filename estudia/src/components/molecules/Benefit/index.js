@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   MainBenefit,
   Title,
@@ -11,38 +11,33 @@ import {
 
 // Logo
 import Logo from "../../../assets/Logo/logo-title.png";
+import axios from "axios";
 
 const Benefit = () => {
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    axios
+      .get("http://localhost:1337/benefits")
+      .then((res) => {
+        setData(res.data);
+      })
+      .catch((err) => console.log(err));
+  }, []);
+  console.log(data);
   return (
     <MainBenefit>
       <Title>
         Kenapa Harus <img src={Logo} alt="logo Estudia" />
       </Title>
       <WrapperBenefit>
-        <ItemBenefit>
-          <Point>01</Point>
-          <TitleBenefit>Praktis dan fleksibel</TitleBenefit>
-          <DescBenefit>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta ea
-            optio nemo voluptates, odio ad temporibus cupiditate alias quod vel.
-          </DescBenefit>
-        </ItemBenefit>
-        <ItemBenefit>
-          <Point>02</Point>
-          <TitleBenefit>Pengalaman Belajar yang menyenangkan</TitleBenefit>
-          <DescBenefit>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta ea
-            optio nemo voluptates, odio ad temporibus cupiditate alias quod vel.
-          </DescBenefit>
-        </ItemBenefit>
-        <ItemBenefit>
-          <Point>03</Point>
-          <TitleBenefit>Hemat Waktu dan Biaya</TitleBenefit>
-          <DescBenefit>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta ea
-            optio nemo voluptates, odio ad temporibus cupiditate alias quod vel.
-          </DescBenefit>
-        </ItemBenefit>
+        {data.length != 0 &&
+          data.map((item) => (
+            <ItemBenefit key={item.id}>
+              <Point>0{item.id}</Point>
+              <TitleBenefit>{item.title}</TitleBenefit>
+              <DescBenefit>{item.desc}</DescBenefit>
+            </ItemBenefit>
+          ))}
       </WrapperBenefit>
     </MainBenefit>
   );

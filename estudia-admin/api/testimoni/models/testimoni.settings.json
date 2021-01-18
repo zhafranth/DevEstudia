@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "testimonis",
+  "info": {
+    "name": "Testimoni"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "testi": {
+      "type": "string",
+      "required": true,
+      "maxLength": 60
+    },
+    "image": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

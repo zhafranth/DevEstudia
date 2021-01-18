@@ -1,6 +1,8 @@
 import styled from "styled-components/macro";
 
 export const ImgWrapper = styled.div`
+  position: relative;
+  z-index: -2;
   padding: 0 12vw;
   border-radius: 15px;
   overflow: hidden;
@@ -20,6 +22,9 @@ export const Desc = styled.p`
   img {
     width: 100%;
     height: auto;
+  }
+  @media screen and (max-width: 768px) {
+    text-align: justify;
   }
 `;
 

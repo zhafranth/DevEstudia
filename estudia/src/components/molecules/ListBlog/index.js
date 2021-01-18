@@ -4,8 +4,6 @@ import { Link, useParams } from "react-router-dom";
 import Card from "../CardBlog";
 
 const Index = ({ data, to, title, height }) => {
-  const { blogId } = useParams();
-  console.log(to);
   return (
     <>
       {title && <Title>{title}</Title>}

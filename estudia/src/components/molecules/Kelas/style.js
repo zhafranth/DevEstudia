@@ -19,6 +19,10 @@ export const Title = styled.h2`
 export const KelasWrapper = styled.div`
   display: flex;
   justify-content: space-between;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 export const Card = styled.div`
   max-width: 264px;
@@ -29,6 +33,11 @@ export const Card = styled.div`
   overflow: hidden;
   box-sizing: border-box;
   text-align: center;
+  cursor: default;
+  @media screen and (max-width: 768px) {
+    width: 80%;
+    margin-bottom: 2.5rem;
+  }
 `;
 export const ImgWrapper = styled.div`
   margin-bottom: 1rem;
@@ -43,12 +52,14 @@ export const ImgWrapper = styled.div`
   }
 `;
 export const CardTitle = styled.h5`
+  cursor: default;
   color: #910603;
   font-size: 24px;
   font-weight: 800;
   margin: 0;
 `;
 export const Desc = styled.p`
+  cursor: default;
   font-size: 14px;
   color: #565656;
   line-height: 1.2rem;
@@ -56,6 +67,7 @@ export const Desc = styled.p`
   margin: 1.2rem 0;
 `;
 export const Time = styled.p`
+  cursor: default;
   margin: 0;
   color: #100d0d;
   font-size: 14px;

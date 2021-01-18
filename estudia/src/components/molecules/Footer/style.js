@@ -25,21 +25,27 @@ export const FooterContent = styled.div`
     text-align: center;
   }
 `;
-export const LogoFooter = styled.div``;
+export const LogoFooter = styled.div`
+  cursor: default;
+`;
 export const FooterItem = styled.div`
   display: flex;
   flex-direction: column;
   .link {
     display: flex;
-    align-items: center;
     img {
       margin-right: 0.5rem;
+    }
+    @media screen and (max-width: 768px) {
+      justify-content: center;
     }
   }
   @media screen and (max-width: 768px) {
     width: 100%;
   }
 `;
-export const Title = styled.h4``;
+export const Title = styled.h4`
+  cursor: default;
+`;
 export const Copyright = styled.p``;
 export const Address = styled.p``;

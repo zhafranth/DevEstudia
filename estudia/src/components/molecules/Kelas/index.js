@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import {
   MainKelas,
   Title,
@@ -14,9 +14,9 @@ import {
 // Images
 import ImgCard from "../../../assets/Images/cover-card.png";
 
-const Kelas = () => {
+const Kelas = ({ refKelas }) => {
   return (
-    <MainKelas>
+    <MainKelas ref={refKelas}>
       <Title>
         Course <br />
         <span>Kelas Bahasa Spanyol</span>
@@ -40,7 +40,7 @@ const Kelas = () => {
           <ImgWrapper>
             <img src={ImgCard} alt="" />
           </ImgWrapper>
-          <CardTitle>A1.1</CardTitle>
+          <CardTitle>A1.2</CardTitle>
           <Desc>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam
             nulla repellendus voluptas cum mollitia placeat.
@@ -54,7 +54,7 @@ const Kelas = () => {
           <ImgWrapper>
             <img src={ImgCard} alt="" />
           </ImgWrapper>
-          <CardTitle>A1.1</CardTitle>
+          <CardTitle>A1.3</CardTitle>
           <Desc>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam
             nulla repellendus voluptas cum mollitia placeat.

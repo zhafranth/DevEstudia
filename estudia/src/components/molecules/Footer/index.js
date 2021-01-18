@@ -22,14 +22,14 @@ const Footer = () => {
     <MainFooter>
       <FooterContent>
         <LogoFooter>
-          <Link className="link">
+          <Link className="link" to="/">
             <img src={Logo} alt="Estudia Logo" />
           </Link>
           <Address>Jakarta, Indonesia</Address>
         </LogoFooter>
         <FooterItem>
           <Title>Tentang Kami</Title>
-          <Link className="link" to="about">
+          <Link className="link" to="/about">
             Profile
           </Link>
           <Link className="link" to="/artikel/artikel">

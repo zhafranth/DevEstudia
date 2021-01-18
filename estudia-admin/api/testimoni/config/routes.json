@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/testimonis",
+      "handler": "testimoni.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/testimonis/count",
+      "handler": "testimoni.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/testimonis/:id",
+      "handler": "testimoni.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/testimonis",
+      "handler": "testimoni.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/testimonis/:id",
+      "handler": "testimoni.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/testimonis/:id",
+      "handler": "testimoni.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

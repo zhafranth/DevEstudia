@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import {
   Hero,
   Benefit,
@@ -15,6 +15,8 @@ const Home = () => {
   const [dataBahasa, setDataBahasa] = useState([]);
   const [dataTataBahasa, setDataTataBahasa] = useState([]);
 
+  const RefKelas = useRef(null);
+
   useEffect(() => {
     axios
       .get("http://localhost:1337/kelas-bahasa-spanyols")
@@ -28,11 +30,11 @@ const Home = () => {
   }, []);
   return (
     <Layout>
-      <Hero />
+      <Hero refKelas={RefKelas} />
       <About />
       <Benefit />
-      {/* <Testimoni />
-      <Kelas /> */}
+      <Testimoni />
+      <Kelas refKelas={RefKelas} />
       <ListBlog
         data={dataBahasa}
         title="Kelas Bahasa Spanyol"
