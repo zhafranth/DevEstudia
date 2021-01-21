@@ -2,6 +2,7 @@
   "name": "estudia-admin",
   "private": true,
   "version": "0.1.0",
+  "homepage": "http://admin.estudiacourse.id/",
   "description": "A Strapi application",
   "scripts": {
     "develop": "strapi develop",
